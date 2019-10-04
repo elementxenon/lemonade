@@ -1,4 +1,3 @@
-# lemonade
 This is a program designed to assist a Fuelrat dispatcher.
 
 #NOTE: THIS PROGRAM IS IN AN EARLY STAGE OF DEVELOPMENT#
