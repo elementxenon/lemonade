@@ -1,14 +1,12 @@
-// SpatchHelperV2.0.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <string> 
 #include <Windows.h> //for windows clipboard interface
 /*TODO:
-Write actual responses for command items
-Write clipboard interface function
+Write actual responses for command items-- mostly done
+Write clipboard interface function--not done at all
 investigate feasibility-- load commands, responses from external file?
 put out fires as needed
+possibly make list auto-updating? worth looking into.
 */
 using namespace std;
 
