@@ -22,7 +22,7 @@ int main()
 {
     cout << "SpatchHelper V2.1.0\nWrittem by: ElementXenon\n";
 	cout << "Please type a command to output the corresponding spatch dialogue.\n";
-	cout << "Type 'help' for the help page, and 'list' for a listing of commands.\n"; //yeah,right. None of this is built yet.
+	cout << "\nTo use this program, please type a command for dispatch line.\nPlease type 'help' for help. Type 'list' for a list of commands. \n"; //yeah,right. None of this is built yet.
 	const int max = 8;
 
 	int i = 0;
@@ -30,14 +30,14 @@ int main()
 	string command[max] = { "prep","fr","wr","bc","omw","fuel", "help","list" };
 	string response[max] =
 	{
-		"prep text",
-		"fr text",
-		"wr text",
-		"bc text",
-		"omw text",
-		"fuel+ text",
-		"Sorry,I don't have a helpguide witten yet. Try 'list', and if that does not help you, nep me in #ratchat",
-		"List of Commands:\nprep\nfr\nwr\nbc\nlist"
+		"Let me know once you have disabled all modules EXCEPT life support. Also, if you see an oxygen timer at any time, let me know immediatly.\n", //prep text
+		"It looks like i have a rat for you :)\n", //fr text
+		"Great! Next, i need you to invite your rats to a wing.\n", //wing text
+		"Lastly, please light your wing beacon.\n", //bc text
+		"Your rats are on their way, and will be with you shortly.\n", //omw text
+		"Please stay with your rat(s) for some fuel saving tips and tricks. Thank you for using the fuelrats.\n", //fuel text
+		"Sorry,I don't have a helpguide witten yet. Try 'list', and if that does not help you, nep me in #ratchat", //help(less) text
+		"List of Commands:\nprep\nfr\nwr\nbc\nlist" //list of commands. May or may not be updated.
 
 	};
 	usrInput = "";
@@ -63,16 +63,19 @@ int main()
 			}
 			else
 			{
-				cout << "ERROR: RED SIDEWINDER\nSomething went wrong, please try again. If you've seen this more than once, something might be on fire, and you should let someone know.";
+				cout << "ERROR: RED SIDEWINDER\nSomething went wrong, please try again. If you've seen this more than once, something might be on fire, and you should let someone know.\n";
 				run++;
 				i++;
 			}
 		}
 		if (run == 1)
 		{
-			cout << "Found match in array position" << clock; //debug output (NOT FINAL)
-			cout << "\nChecking response array, position " << clock << " for response..."; // ibid
-			cout << "Found the following response in response array:\n" << response[clock]; //ibid
+			//Following code is for debug and development
+			//cout << "Found match in array position" << clock; //debug output (NOT FINAL)
+			//cout << "\nChecking response array, position " << clock << " for response..."; // ibid
+			//cout << "Found the following response in response array:\n" ; //ibid
+
+			cout << response[clock];
 
 			clip(response[clock]);
 			//call the "paste to windows clipboard" function HERE (not built yet) :P
