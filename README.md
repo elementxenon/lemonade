@@ -1,8 +1,10 @@
 # lemonade
 This is a program designed to assist a Fuelrat dispatcher.
+
 #NOTE: THIS PROGRAM IS IN AN EARLY STAGE OF DEVELOPMENT#
 
-*****HOW TO USE*****
+**HOW TO USE**
+
 Option 1: Compile from source code
 1) Navigate to lemonade/SpatchHelperV2.0/SpatchHelperV2.0/ and find the .cpp file
 2) Download the .cpp file, and compile with the C++ compiler of your choice.
