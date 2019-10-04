@@ -14,3 +14,6 @@ Option 2: Use the .exe (Windows Only)
 2) Download the .exe file. 
 3) Yay! You are done! I try to keep the most recent version of SpatchHelper here.
 
+Option 3: Visual Studio
+1) Clone lemonade
+2) Navigate to lemonade/SpatchHelperV2.0/ and open the .sln file
