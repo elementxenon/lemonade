@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string> 
-#include <Windows.h> //for windows clipboard interface
+#include <Windows.h> //for windows clipboard interface. Comment out for compile on linux.
 /*TODO:
-Write actual responses for command items-- mostly done
+Write actual responses for command items-- done for all current commands
 Write clipboard interface function--not done at all
 investigate feasibility-- load commands, responses from external file?
 put out fires as needed
@@ -10,18 +10,31 @@ possibly make list auto-updating? worth looking into.
 */
 using namespace std;
 
-
-void clip(string s) //windows clipboard interface. DO NOT include for Linux builds
+//Yes, this was grabbed directly from some forum somewhere. Don't judge, you do it too. You know you do.
+void toClipboard(HWND hwnd, const std::string& s)
 {
-	
+	OpenClipboard(hwnd);
+	EmptyClipboard();
+	HGLOBAL hg = GlobalAlloc(GMEM_MOVEABLE, s.size() + 1);
+	if (!hg)
+	{
+		CloseClipboard();
+		return;
+	}
+	memcpy(GlobalLock(hg), s.c_str(), s.size() + 1);
+	GlobalUnlock(hg);
+	SetClipboardData(CF_TEXT, hg);
+	CloseClipboard();
+	GlobalFree(hg);
 }
+
 
 int main()
 {
     cout << "SpatchHelper V2.1.0\nWrittem by: ElementXenon\n";
 	cout << "Please type a command to output the corresponding spatch dialogue.\n";
 	cout << "\nTo use this program, please type a command for dispatch line.\nPlease type 'help' for help. Type 'list' for a list of commands. \n"; //yeah,right. None of this is built yet.
-	const int max = 8;
+	const int max = 8; //maximum number of items in lookup arrays.
 
 	int i = 0;
 	string usrInput = "";
@@ -75,7 +88,7 @@ int main()
 
 			cout << response[clock];
 
-			clip(response[clock]);
+			toClipboard(NULL, response[clock]);
 			//call the "paste to windows clipboard" function HERE (not built yet) :P
 		}
 		else if (run /= 1)
