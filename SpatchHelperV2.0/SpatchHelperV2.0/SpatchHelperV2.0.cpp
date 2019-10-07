@@ -34,11 +34,11 @@ int main()
     cout << "SpatchHelper V2.1.0\nWrittem by: ElementXenon\n";
 	cout << "Please type a command to output the corresponding spatch dialogue.\n";
 	cout << "\nTo use this program, please type a command for dispatch line.\nPlease type 'help' for help. Type 'list' for a list of commands. \n"; //yeah,right. None of this is built yet.
-	const int max = 8; //maximum number of items in lookup arrays.
+	const int max = 9; //maximum number of items in lookup arrays.
 
 	int i = 0;
 	string usrInput = "";
-	string command[max] = { "prep","fr","wr","bc","omw","fuel", "help","list" };
+	string command[max] = { "prep","fr","wr","bc","omw","fuel","sc", "help","list" };
 	string response[max] =
 	{
 		"Let me know once you have disabled all modules EXCEPT life support. Also, if you see an oxygen timer at any time, let me know immediatly.\n", //prep text
@@ -47,8 +47,9 @@ int main()
 		"Lastly, please light your wing beacon.\n", //bc text
 		"Your rats are on their way, and will be with you shortly.\n", //omw text
 		"Please stay with your rat(s) for some fuel saving tips and tricks. Thank you for using the fuelrats.\n", //fuel text
+		"It seems you are a bit too close to the star for our rats to get to you right now. But don't worry! If you move a bit farther from the star, your rats will be able to reach you. Please follow these instructions, and we can continue the rescue.", //sc text
 		"Sorry,I don't have a helpguide witten yet. Try 'list', and if that does not help you, nep me in #ratchat", //help(less) text
-		"List of Commands:\nprep\nfr\nwr\nbc\nlist" //list of commands. May or may not be updated.
+		"List of Commands:\nprep\nfr\nwr\nbc\nomw\nfuel\nsc\nhelp\nlist" //list of commands. May or may not be updated.
 
 	};
 	usrInput = "";
