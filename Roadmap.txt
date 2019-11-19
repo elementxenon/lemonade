@@ -1,0 +1,16 @@
+FuelRat 3rd Party Dev -- Project Rodentia
+
+Goals (Long term)
+---------------------------------------------------------
+*Interface with web board
+    -Pull case data (platform, system, o2status) (Not Started)
+*Interface with Elite Dangerous
+    -Plot route to system via AutoHotKey and Galmap (Not started)
+*ControlPanel
+    -Shows active cases from web board (Not Started)
+    -Each case has a "Plot to System button" (Not Started)
+    -Cases over 1000 ly have a "Neutron Plot button" (Not Started)
+
+
+
+    
